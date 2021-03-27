@@ -20,7 +20,7 @@ from models.player import Player
 # def game(player1_choice, player2_choice):
 #     return render_template('base.html', player1_choice = player1_choice, player2_choice = player2_choice)
 
-# COMMENT: returns player choices and result...
+# COMMENT: returns player choices AND result...
 @app.route('/<player1_choice>/<player2_choice>')
 def game(player1_choice, player2_choice):
     result = who_wins(player1_choice, player2_choice)

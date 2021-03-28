@@ -4,20 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock/Paper/Scissors</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Rock/Paper/Scissors - {{ title }}</title>
 </head>
+
 <body>
-    
+
+    {% block content %}
+
     <section>
-        <h1>Rock, paper or scissors? You choose!</h1><b></b>
-        <p>Player 1 chose {{ player1_choice }}</p>
-        <p>Player 2 chose {{ player2_choice }}</p>
+        <h1>Welcome to the game Rock/Paper/Scissors</h1><b></b>
+        <p>If you don't know how to play, see our guide <a href="/welcome">here</a></p>
+        <h2>Your choices are...</h2>
+        <p>Player 1 has picked... 
+            {% if player1_choice != "player1_choice" %}
+            {{ player1_choice }}
+            {% endif %}
+        </p>
+        <p>Player 2 has picked... 
+            {% if player2_choice != "player2_choice" %}
+            {{ player2_choice }}
+            {% endif %}
+        </p>
     </section>
     
     <section>
         <h1>And the result is...</h1>
-        <p> {{ result }} </p>
+        <p> 
+            {% if result != None %}
+            {{ result }} 
+            {% endif %}
+        </p>
     </section>
 
+    {% endblock %}
+
 </body>
+
 </html>

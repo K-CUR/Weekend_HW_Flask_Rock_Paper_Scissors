@@ -1,0 +1,21 @@
+body {
+    margin: 12;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgba(35, 93, 160, 0.9);
+    background-color:hsla(65, 55%, 50%, 0.8);
+    text-align: center;
+
+}
+
+.keep_left {
+    display: inline-block;
+    text-align: left;
+}
+
+h1 {
+    padding: 25px;
+}
+
+h2 {
+    padding: 15px;
+}

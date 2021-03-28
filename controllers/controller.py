@@ -24,7 +24,11 @@ from models.player import Player
 @app.route('/<player1_choice>/<player2_choice>')
 def game(player1_choice, player2_choice):
     result = who_wins(player1_choice, player2_choice)
-    return render_template('base.html', player1_choice = player1_choice, player2_choice = player2_choice, result = result)
+    return render_template('base.html', title = "Game", player1_choice = player1_choice, player2_choice = player2_choice, result = result)
+
+@app.route('/welcome')
+def welcome():
+    return render_template('welcome.html', title = "How to")
 
 
 
